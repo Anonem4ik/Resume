@@ -1,0 +1,24 @@
+{
+    "git": [
+        { "type": "string", "name": "Наименование инструмента", "value": "git" },
+        { "type": "string", "name": "Назначение", "value": "Контроль версий" },
+        { "type": "string", "name": "Уровень освоения", "value": "Умеренный" },
+        { "type": "date", "name": "Начало использования", "value": "01.04.2025" }
+    ],
+    "Figma": [
+        { "type": "string", "name": "Наименование инструмента", "value": "Figma" },
+        { "type": "string", "name": "Назначение", "value": "Дизайн веб-страниц" },
+        { "type": "number", "name": "Максимальное значение метрик", "value": "10" },
+        { "type": "number", "name": "Освоение инструманта", "value": "8" },
+        { "type": "number", "name": "Умение дизайна", "value": "3" },
+        { "type": "number", "name": "Векторная графика", "value": "6" },
+        { "type": "date", "name": "Начало использования", "value": "01.05.2024" }
+    ],
+    "Docker": [
+        { "type": "string", "name": "Наименование инструмента", "value": "Docker" },
+        { "type": "string", "name": "Назначение", "value": "Изоляция среды исполнения программы" },
+        { "type": "string", "name": "Уровень освоения", "value": "Умеренный" },
+        { "type": "string", "name": "Дополнительные инструменты", "value": "Docker Compose" },
+        { "type": "date", "name": "Начало использования", "value": "01.11.2025" }
+    ]
+}

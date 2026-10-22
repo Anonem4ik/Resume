@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Моё резюме</title>
+</head>
+<body>
+    <!-- Dialog with video -->
+    <dialog id="videoplayer" closeby="closerequest">
+        <div class="player-container">
+            <div class="background-blur"></div>
+            <button class="exit-button" commandfor="videoplayer" command="close">
+                <img src="./images/close_icon.svg" alt="Закрыть">
+            </button>
+            <video id="preview" controls>
+                <source src="./media/Nechto preview.mp4" type="video/mp4">
+            </video>
+        </div>
+    </dialog>
+
+    <!-- Greeting section -->
+    <section id="section_greeting">
+        <h1>Приветствую!</h1>
+        <p>
+            Меня зовут Иван, и я начинающий программист, пробующий себя в различных сферах:
+            от web-разработки до создания видеоигр.
+        </p>
+    </section>
+
+    <!-- Skills section -->
+    <section id="section_skills">
+        <h1>Мои навыки</h1>
+        <!-- Display shortcut -->
+        <button class="shortcut" id="btn_open">
+            <img src="./images/shortcut.svg" alt="Открыть">
+            <div class="shortcut-name">MySkills</div>
+        </button>
+        <!-- Display -->
+        <div class="display-wrapper" id="display_wrapper">
+        <div class="fullscreen-toggle" id="fullscreen_toggle" style="display: none;">
+            <div class="blur"></div>
+            <img src="./images/icon_fullscreen.svg" alt="На весь экран">
+        </div>
+        <div class="display" id="display">
+            <!-- Command line -->
+            <div class="command-line">
+                <div class="process-name">browser</div>
+                <div class="actions">
+                    <button class="icon" id="btn_collapse">
+                        <img src="./images/control_tray.svg" alt="Скрыть">
+                    </button>
+                    <button class="icon" id="btn_window_mode">
+                        <img src="./images/control_window.svg" alt="Оконный режим">
+                    </button>
+                    <button class="icon" id="btn_close">
+                        <img src="./images/control_close.svg" alt="Закрыть">
+                    </button>
+                </div>
+            </div>
+            <!-- Content of display -->
+            <div class="content" id="content_box">
+                <!-- Veil that animate tasks change -->
+                <div class="veil"></div>
+                <!-- Browser -->
+                <div class="content-unit" id="browser">
+                    <div class="tabs-list">
+                        <div class="tab">
+                            <img class="favicon" src="./images/internet_icon.svg">
+                            <div class="tab-name">Список навыков</div>
+                            <img class="close" src="./images/close_icon.svg" alt="Закрыть">
+                        </div>
+                    </div>
+                    <div class="address-line">
+                        <img src="./images/control_back.svg" alt="Назад">
+                        <img src="./images/control_refresh.svg" alt="Перезагрузить страницу">
+                        <div class="address">https://my-skills.net/skills-list?area=web</div>
+                        <img src="./images/control_more.svg" alt="Больше">
+                    </div>
+                    <div class="browser-content-wrapper">
+                        <div class="browser-content">
+                            <div class="page">
+                                <div class="head">
+                                    <button class="pseudo-link" address="">На главную</button>
+                                    <button class="pseudo-link" address="skills-list?area=web">Резюме</button>
+                                    <button class="pseudo-link" address="contacts">Связаться со мной</button>
+                                </div>
+                                <div class="nav">
+                                    <div class="nav-section">
+                                        <img src="./images/browser_image.png" alt="Поля">
+                                    </div>
+                                    <div class="nav-section">
+                                        <div class="nav-element">
+                                            <img src="./images/internet_icon_black.svg" alt="Иконка интернета">
+                                            <button class="pseudo-link" address="skills-list?area=web">Веб-разработка</button>
+                                        </div>
+                                        <div class="nav-element">
+                                            <img src="./images//computer_icon.png" alt="Иконка компьютера">
+                                            <button class="pseudo-link" address="skills-list?area=apps">Разработка приложений</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content"><!-- Fills with JS --></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Console -->
+                <div class="content-unit" id="console">
+                    <div class="console-promt" id="console_promt">
+                        <span class="green-text">user@linux</span>:<span class="blue-text">/var/local/example</span>$ cat info.txt<br>
+                        Языки программирования:<br>
+                        > Python (на нём был создан один из моих проектов)<br>
+                        > C#/C++ (знание синтаксиса, однако опыта работы с ними нет)<br>
+                        <br>
+                        Операционные системы:<br>
+                        > Windows (основная система)<br>
+                        > Linux - Debian (базовые знания)<br>
+                    </div>
+                </div>
+                <!-- Skills manager -->
+                <div class="content-unit" id="skills_manager">
+                    <div class="actions-list">
+                        <button class="action">Файл</button><!--
+                        --><button class="action">Вид</button><!--
+                        --><button class="action">О программе</button>
+                    </div>
+                    <div class="objects">
+                        <button class="object">git</button>
+                        <button class="object">Figma</button>
+                        <button class="object">Docker</button>
+                    </div>
+                    <div class="properties-wrapper">
+                        <table class="properties">
+                            <tbody id="workspace">
+                                <tr>
+                                    <th class="type"></th>
+                                    <th class="type-text">Тип данных</th>
+                                    <th class="prop-name">Название</th>
+                                    <th class="prop-value">Значение</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="overshadow"></div>
+                    </div>
+                    <div class="status-bar">
+                        <div class="status">Последнее действие: <span class="status-name">запуск программы</span></div>
+                        <div class="info">18:44</div>
+                        <div class="info">0.1 KB</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Taskbar to change content -->
+            <div class="taskbar">
+                <button class="task" taskindex="0">
+                    <img src="./images/task_browser.svg" alt="Browser">
+                    <div class="task-glow"></div>
+                </button>
+                <button class="task" taskindex="1">
+                    <img src="./images/task_console.svg" alt="Console">
+                    <div class="task-glow"></div>
+                </button>
+                <button class="task" taskindex="2">
+                    <img src="./images/task_skills_manager.svg" alt="Skills manager">
+                    <div class="task-glow"></div>
+                </button>
+            </div>
+        </div>
+        </div>
+        <!-- List of skills (for small devices with limited feachures) -->
+        <div class="skills-list-simple" id="skills_list_simple" style="display: none;">
+            <div class="skills-set">
+                <div class="header">
+                    <img src="./images/task_browser.svg" alt="Иконка">
+                    <div class="header-text">Веб-разработка</div>
+                </div>
+                <ul class="body">
+                    <li>Front-end <span class="secondary-text">(HTML, CSS, JS)</span></li>
+                    <li>Back-end <span class="secondary-text">(PHP, MySQL, NGINX)</span></li>
+                </ul>
+            </div>
+            <div class="skills-set">
+                <div class="header">
+                    <img src="./images/task_console.svg" alt="Иконка">
+                    <div class="header-text">Программирование</div>
+                </div>
+                <div class="body">
+                    <ul>
+                        <li>Python <span class="secondary-text">(прекрасно разбираюсь)</span></li>
+                        <li>C#/C++ <span class="secondary-text">(знаю синтаксис)</span></li>
+                    </ul>
+                    <ul>
+                        <li>Windows <span class="secondary-text">(Основная система)</span></li>
+                        <li>Linux - Debian <span class="secondary-text">(Базовые знания)</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skills-set">
+                <div class="header">
+                    <img src="./images/task_skills_manager.svg" alt="Иконка">
+                    <div class="header-text">Инструменты</div>
+                </div>
+                <ul class="body">
+                    <li>Figma <span class="secondary-text">(создание макетов)</span></li>
+                    <li>git <span class="secondary-text">(контроль версий)</span></li>
+                    <li>Docker <span class="secondary-text">(изоляция среды выполнения)</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+        <h1>Образование</h1>
+        <div class="wrapper">
+            <div class="point">
+                <img src="./images/education_icon_1.svg" alt="Иконка">
+                <div class="text-wrapper">
+                    <div class="point-name">Специальность</div>
+                    <div class="point-value">Информационные технологии и программирование</div>
+                </div>
+            </div>
+            <div class="point">
+                <img src="./images/education_icon_2.svg" alt="Иконка">
+                <div class="text-wrapper">
+                    <div class="point-name">Направление</div>
+                    <div class="point-value">Веб-разработка</div>
+                </div>
+            </div>
+            <div class="point">
+                <img src="./images/education_icon_3.svg" alt="Иконка">
+                <div class="text-wrapper">
+                    <div class="point-name">Диплом</div>
+                    <div class="point-value">Красный с отличием</div>
+                </div>
+            </div>
+            <div class="point">
+                <img src="./images/education_icon_4.svg" alt="Иконка">
+                <div class="text-wrapper">
+                    <div class="point-name">Ступень</div>
+                    <div class="point-value">Среднее профессиональное</div>
+                </div>
+            </div>
+            <div class="point">
+                <img src="./images/education_icon_5.svg" alt="Иконка">
+                <div class="text-wrapper">
+                    <div class="point-name">Учебное заведение</div>
+                    <div class="point-value">ОГУ им. И.С. Тургенева</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h1>Проекты</h1>
+        <div class="control-wrapper">
+            <button class="slider-control" id="control_left" disabled>
+                <img src="./images/control_left.svg" alt="&lAarr;">
+            </button>
+            <div class="slider-wrapper">
+                <div class="rail">
+                    <div class="project" id="nechto">
+                        <div class="project-presentation">
+                            <img src="./images/project_logo_nechto.png" alt="Логотип проекта">
+                            <h2>Цифровая настольная игра "Нечто" (2020)</h2>
+                        </div>
+                        <p>
+                            Данный проект представляет из себя перенос настольной игры “Нечто” в
+                            цифровую версию, а именно в “Discord”. Он планировался как испытание моих
+                            знаний, и к публикации не планировался.
+                        </p>
+                        <p>
+                            Он является одним из моих первых проектов, который я довёл до конца. В
+                            готовой версии было проведено несколько удачных тестовых игр, после чего
+                            он был отправлен в архив.
+                        </p>
+                        <div class="links-list">
+                            <div class="project-link">
+                                <img src="./images/link_github.png" alt="Github">
+                                <a href="https://github.com/Anonem4ik/Nechto" target="_blank">Github</a>
+                            </div>
+                            <div class="project-link">
+                                <img src="./images/link_video.svg" alt="Видеопример">
+                                <button commandfor="videoplayer" command="show-modal">Видеопример</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project" id="severcorp">
+                        <div class="project-presentation">
+                            <img src="./images/project_logo_severcorp.svg" alt="Логотип проекта">
+                            <h2>Сайт для компании “ООО ПКП Север” (2026)</h2>
+                        </div>
+                        <p>
+                            Этот сайт был написан для моего дипломного проекта, однако я вложил в него
+                            довольно много усилий. В данный момент проект заброшен, так как в планах было
+                            полностью переписать его на Larevel.
+                        </p>
+                        <p>
+                            К сожалению, данной компании больше не существует, так что данный сайт
+                            используется лишь для демонстрации моих возможностей.
+                        </p>
+                        <div class="links-list">
+                            <div class="project-link">
+                                <img src="./images/link_github.png" alt="Github">
+                                <a href="https://github.com/Anonem4ik/Sever-Corp" target="_blank">Github</a>
+                            </div>
+                            <div class="project-link">
+                                <img src="./images/link_figma.svg" alt="Figma">
+                                <a href="https://www.figma.com/community/file/1693400664886197918" target="_blank">Макет</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="slider-control" id="control_right">
+                <img src="./images/control_right.svg" alt="&rAarr;">
+            </button>
+        </div>
+    </section>
+
+    <!-- Contacts -->
+    <section id="contacts">
+        <h1>Контакты</h1>
+        <div class="contacts-wrapper">
+            <div class="contact">
+                <img src="./images/icon_mail.svg" alt="Электронная почта">
+                <div class="contact-value"><a href="mailto:example@email.org">example@email.org</a></div>
+            </div>
+            <div class="contact">
+                <img src="./images/icon_phone.svg" alt="Телефон">
+                <div class="contact-value"><a href="tel:88005553535">8(800)555-35-35</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script type="module" src="./scripts/main.js"></script>
+</body>
+</html>
