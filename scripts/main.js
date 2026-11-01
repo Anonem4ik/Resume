@@ -99,7 +99,7 @@ hasOreintationSupport().then((is_supported) => {
 Display.create_animation();
 
 // Initializing browser
-Browser.rediret_to("skills-list?area=web");
+Browser.rediret_to("");
 // Assigning events to pseudo links
 Browser.BROWSER.querySelectorAll(".pseudo-link").forEach(button => {
     const address = button.getAttribute("address");
