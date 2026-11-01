@@ -1,0 +1,408 @@
+/* Skills section: Browser */
+
+#browser {
+    display: grid;
+    grid-template-rows: 30px 30px 1fr;
+    background-color: white;
+}
+
+#browser * {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#browser .tabs-list {
+    background-color: var(--gray-background);
+    padding: 0 5px;
+}
+
+#browser .tab {
+    display: flex;
+    align-items: center;
+    width: 160px;
+    border-radius: 5px 5px 0  0;
+    padding: 5px;
+    background-color: var(--gray-foreground);
+    font-size: 12px;
+}
+
+#browser .tab > .favicon {
+    width: 20px;
+    margin-right: 5px;
+}
+
+#browser .tab > .tab-name {
+    flex-grow: 1;
+}
+
+#browser .address-line {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 5px;
+    background-color: var(--gray-foreground);
+}
+
+#browser .address {
+    flex-grow: 1;
+    border-radius: 10px;
+    padding: 3px 10px;
+    background-color: white;
+    color: black;
+    font-family: 'IBM Plex Mono', Arial, sans-serif;
+    font-size: 14px;
+}
+
+#browser .browser-content-wrapper {
+    background-color: var(--gray-foreground);
+    padding: 0px 3px 3px;
+}
+
+#browser .browser-content {
+    height: 100%;
+    border-radius: 10px;
+    padding-top: 10px;
+    background: url("../images/browser_background.png");
+    background-size: cover;
+}
+
+#browser .page {
+    display: grid;
+    grid-template-areas:
+        "head    nav"
+        "content nav";
+    grid-template-rows: max-content 1fr;
+    grid-template-columns: 1fr max-content;
+    gap: 10px;
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 10px 0;
+    background-color: white;
+}
+
+#browser .pseudo-link {
+    line-height: normal;
+    color: var(--link);
+    text-decoration: underline;
+}
+
+#browser .head {
+    grid-area: head;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--nearly-white);
+}
+
+#browser .head > .pseudo-link {
+    font-size: 20px;
+}
+
+#browser .nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 10px;
+}
+
+#browser .nav-section {
+    background-color: var(--nearly-white);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#browser .nav-section:last-child {
+    flex-grow: 1;
+    border-radius: 10px 10px 0 0;
+}
+
+#browser .nav-element {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 5px;
+    align-items: center;
+    width: 100%;
+    max-width: 128px;
+    padding: 5px 0;
+}
+
+#browser .nav-element > img {
+    width: 25px;
+    height: 25px;
+}
+
+#browser .nav-element > .pseudo-link {
+    font-size: 12px;
+}
+
+#browser .content {
+    grid-area: content;
+}
+
+#browser .content * {
+    color: black;
+}
+
+#browser .content h1 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+#browser .content p {
+    font-size: 16px;
+}
+
+#browser .content p::before {
+    content: "";
+    display: inline-block;
+    width: 1em;
+}
+
+#browser .content a {
+    color: var(--link);
+}
+
+#browser .skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+#browser .skills-container > .element {
+    border: 1px var(--gray-foreground) solid;
+    padding: 10px;
+    background-color: var(--nearly-white);
+}
+
+#browser .skills-container .el-header {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+#browser .skills-container .el-header > h2 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+#browser .skills-container .el-list, #browser .content ul {
+    padding-left: 25px;
+    font-size: 20px;
+}
+
+/* Skills section: Console */
+
+#console .console-promt {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 5px;
+    resize: none;
+    background: linear-gradient(#261E2A, #382C3D);
+    font-size: 20px;
+    font-family: monospace;
+}
+
+#console .green-text {
+    color: #28EB1D;
+}
+
+#console .blue-text {
+    color: #22D2F2;
+}
+
+/* Skills section: Skills manager */
+
+#skills_manager {
+    display: grid;
+    grid-template-areas:
+        "actions actions"
+        "objects properties"
+        "status  status";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto 1fr;
+    gap: 5px;
+    height: 100%;
+    background-color: var(--light-gray);
+    font-size: 10px;
+}
+
+#skills_manager * {
+    line-height: normal;
+    color: black;
+    font-family: 'IBM Plex Mono', Arial, sans-serif;
+    font-size: 1em;
+}
+
+#skills_manager .actions-list {
+    grid-area: actions;
+    background-color: white;
+}
+
+#skills_manager .actions-list > .action, #skills_manager .status-bar > * {
+    padding: 2px 5px;
+}
+
+#skills_manager .actions-list > .action:hover {
+    background-color: var(--light-gray);
+}
+
+#skills_manager :is(.objects, .properties-wrapper) {
+    background-color: white;
+}
+
+#skills_manager :is(.objects, .overshadow) {
+    box-shadow: inset -2px -2px 3px gray, inset 1px 1px 2px gray;
+}
+
+#skills_manager .objects {
+    grid-area: objects;
+    width: 210px;
+    margin-left: 5px;
+    padding: 5px;
+}
+
+#skills_manager .objects > .object {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 1px;
+    text-align: left;
+}
+
+#skills_manager .objects > .object:hover {
+    background-color: var(--select-fill);
+    outline: 1px var(--select-border) solid;
+}
+
+#skills_manager {
+    grid-area: properties;
+    width: 100%;
+    height: 100%;
+    margin-right: 5px;
+}
+
+#skills_manager .properties-wrapper {
+    position: relative;
+    margin-right: 5px;
+}
+
+#skills_manager .overshadow {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#skills_manager .properties {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+    height: fit-content;
+}
+
+#skills_manager .properties img {
+    display: block;
+}
+
+#skills_manager .properties tr {
+    height: 20px;
+    background-color: white;
+}
+
+#skills_manager .properties tr:nth-last-child(2n - 1) {
+    background-color: var(--nearly-white);
+}
+
+#skills_manager .properties tr:is(:hover, :focus):not(:first-child) {
+    background-color: var(--light-gray);
+}
+
+#skills_manager .properties :is(th, td) {
+    border-right: 1px var(--light-gray) solid;
+}
+
+#skills_manager .properties th.type {
+    width: 20px;
+}
+
+#skills_manager .properties th.type-text {
+    width: 80px;
+}
+
+#skills_manager .properties th:is(.prop-name, .prop-value) {
+    width: calc(50% - (20px + 80px + 3px) / 2);
+}
+
+#skills_manager .properties :is(th, td):not(:first-child) {
+    padding: 0 5px;
+}
+
+#skills_manager .status-bar {
+    grid-area: status;
+    display: flex;
+    background-color: var(--nearly-white);
+}
+
+#skills_manager .status-bar > .status {
+    flex-grow: 1;
+}
+
+#skills_manager .status-name {
+    color: var(--gray-foreground);
+}
+
+/* Skills section: Simple */
+
+#section_skills .skills-list-simple {
+    width: 95%;
+    margin: 0 auto;
+}
+
+#section_skills .skills-set {
+    width: 100%;
+    margin-bottom: 25px;
+    border: 3px var(--green-main) solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#section_skills .skills-set > .header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#section_skills .skills-set .header-text {
+    flex-grow: 1;
+    text-align: center;
+    font-family: 'Tektur', Arial, sans-serif;
+    font-size: var(--font-big);
+}
+
+#section_skills .skills-set > .body {
+    font-family: 'Ubuntu', Arial, sans-serif;
+    font-size: var(--font-normal);
+}
+
+#section_skills .skills-set > div.body {
+    display: flex;
+}
+
+#section_skills .skills-set li {
+    margin-left: 25px;
+}
+
+#section_skills .skills-set .secondary-text {
+    color: var(--gray-foreground);
+}

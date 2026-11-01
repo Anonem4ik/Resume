@@ -1,0 +1,164 @@
+/* Projects */
+
+#projects .control-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#projects .slider-control:disabled {
+    opacity: 0.2;
+    cursor: auto;
+}
+
+#projects .slider-wrapper {
+    overflow: hidden;
+    width: min(1100px, calc(98% - 160px));
+    min-height: 550px;
+}
+
+#projects .rail {
+    display: grid;
+    gap: 25px;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    height: 100%;
+    transition: 600ms ease-out;
+}
+
+#projects .project {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+    height: 100%;
+    border: 5px var(--green-main) solid;
+    padding: 20px;
+    background-size: cover;
+    background-position: 50%;
+    font-family: 'Tektur', Arial, sans-serif;
+}
+
+#projects .project-presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#projects .project-presentation > h2 {
+    text-align: center;
+    font-size: 48px;
+}
+
+#projects .project > p {
+    font-size: 24px;
+}
+
+#projects .links-list {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 25px;
+}
+
+#projects .project-link {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    background-color: #00000099;
+}
+
+#projects .project-link > img {
+    width: 50px;
+    height: 50px;
+}
+
+#projects .project-link > :is(a, button) {
+    color: var(--link);
+    font-size: 24px;
+}
+
+#projects .project-link > button {
+    color: white;
+}
+
+#nechto {
+    background: url("../images/project_background_nechto.png");
+    box-shadow: 0 0 70px black inset;
+}
+
+#severcorp {
+    background: url("../images/project_background_severcorp.png");
+}
+
+#severcorp * {
+    font-family: 'Ubuntu', Arial, sans-serif;
+}
+
+@media (max-width: 1000px) {
+    #projects .project > p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 880px) {
+    #projects .slider-control > img {
+        aspect-ratio: 1 / 1;
+        width: 30px;
+    }
+
+    #projects .slider-wrapper {
+        width: calc(100% - 100px);
+        height: auto;
+        min-height: unset;
+    }
+
+    #projects .project-presentation > img {
+        aspect-ratio: 1 / 1;
+        width: 110px;
+    }
+
+    #projects .project-presentation > h2 {
+        font-size: 28px;
+    }
+
+    #projects .project > p {
+        font-size: 15px;
+    }
+
+    #projects .project-link > img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #projects .project-link > :is(a, button) {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    #projects .control-wrapper {
+        display: grid;
+        grid-template-areas:
+            "slider slider"
+            "left   right";
+    }
+
+    #projects .slider-wrapper {
+        grid-area: slider;
+        width: 95%;
+        margin: auto;
+    }
+
+    #projects .project-presentation > h2 {
+        font-size: 20px;
+    }
+
+    #projects .project > p {
+        font-size: 14px;
+    }
+}

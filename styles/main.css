@@ -1,0 +1,56 @@
+/* Main styles */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+html {
+    font-size: 10px;
+}
+
+@media (max-width: 700px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 6rem 0;
+    background-color: var(--bg-color);
+}
+
+/* General tags styles */
+
+section {
+    margin-bottom: 6rem;
+}
+
+h1 {
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--green-main);
+    font-size: var(--font-header);
+    font-weight: 400;
+    font-family: 'Science Gothic', sans-serif;
+}
+
+section > p {
+    width: min(860px, 99%);
+    margin: 0 auto 20px;
+    text-align: center;
+    font-family: 'Tektur', sans-serif;
+    font-size: var(--font-normal);
+}
+
+button {
+    border: none;
+    background: none;
+    font-family: inherit;
+    line-height: 0;
+    cursor: pointer;
+}

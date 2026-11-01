@@ -1,0 +1,26 @@
+/* About me section */
+
+#about_me .softskills-set {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+}
+
+#about_me .softskill {
+    padding: 5px;
+    background-color: black;
+}
+
+#about_me .softskill > img {
+    outline: 3px var(--green-main) solid;
+    outline-offset: -3px;
+}
+
+#about_me .softskill > .text-description {
+    width: 270px;
+    text-align: center;
+    font-family: 'Tektur', sans-serif;
+    font-size: var(--font-smaller);
+}

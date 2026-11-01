@@ -1,0 +1,61 @@
+/* Imports */
+
+@import url("./main.css");
+@import url("./greeting.css");
+@import url("./about_me.css");
+@import url("./skills_general.css");
+@import url("./skills_inside.css");
+@import url("./education.css");
+@import url("./projects.css");
+@import url("./videoplayer.css");
+
+/* Varaiables */
+
+:root {
+    /* Font sizes */
+    --font-header: 4.8rem;
+    --font-big: 3.6rem;
+    --font-normal: 2.4rem;
+    --font-smaller: 2.0rem;
+    /* Colors */
+    --bg-color: #171717;
+    --green-main: #0C7710;
+    --green-shadow: #073B09;
+    --gray-background: #2B2B2B;
+    --gray-foreground: #606060;
+    --light-gray: #D9D9D9;
+    --nearly-white: #EBEBEB;
+    --link: #1947DD;
+    --link-used: #8819DD;
+    --select-fill: #71C4FFAA;
+    --select-border: #71C4FF;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: 'Science Gothic';
+    src: url("../fonts/ScienceGothicVaraiable.ttf");
+}
+
+@font-face {
+    font-family: 'Tektur';
+    src: url('../fonts/TekturVariable.ttf');
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('../fonts/IBMPlexMono-Regular.ttf');
+    font-weight: 100 400;
+}
+
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('./fonts/IBMPlexMono-Bold.ttf');
+    font-weight: 400 900;
+}

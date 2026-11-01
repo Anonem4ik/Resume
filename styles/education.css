@@ -1,0 +1,62 @@
+/* Education */
+
+#education .wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 25px;
+    width: 98%;
+    margin: auto;
+}
+
+#education .point {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    min-height: 120px;
+    border: 5px var(--green-main) solid;
+    box-shadow: 5px 5px 1px var(--green-shadow);
+    padding: 10px;
+}
+
+#education .point > img {
+    width: 60px;
+    height: 70px;
+}
+
+#education .text-wrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 10px;
+    width: 340px;
+    height: 100%;
+    margin-left: 10px;
+    font-family: 'Tektur', Arial, sans-serif;
+    font-size: 20px;
+}
+
+#education .point-name {
+    color: var(--gray-foreground);
+    font-size: 24px;
+}
+
+@media (max-width: 470px) {
+    #education .point {
+        width: 95%;
+    }
+
+    #education .point > img {
+        align-self: 6 / 7;
+        width: 50px;
+    }
+
+    #education .text-wrapper {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    #education .point-name {
+        font-size: 20px;
+    }
+}
